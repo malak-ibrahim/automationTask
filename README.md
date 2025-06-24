@@ -1,6 +1,6 @@
 # Rayyan Review Creation Automation
 
-A comprehensive Cypress automation framework for creating team reviews on Rayyan (https://new.rayyan.ai). This project demonstrates modern automation practices including Page Object Models, comprehensive error handling, and robust UI interactions.
+A comprehensive Cypress automation framework for creating team reviews on Rayyan (https://new.rayyan.ai). This Task demonstrates modern automation practices including Page Object Models, comprehensive error handling, and robust UI interactions.
 
 ## 🎯 Task Overview
 
