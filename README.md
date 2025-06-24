@@ -190,15 +190,6 @@ Below are screenshots demonstrating the automation in action:
 
 ---
 
-**Note**: To add your own screenshots:
-1. Run the tests: `npm run test:rayyan:headed`
-2. Take screenshots during test execution
-3. Save them in the `screenshots/` directory
-4. Update the paths in this README section
-5. Commit and push the changes
-
----
-
 ## 🧪 Available Test Scripts
 
 ### Rayyan-Specific Commands

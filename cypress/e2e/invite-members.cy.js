@@ -41,13 +41,16 @@ describe('Invite Members Step - Standalone Suite', () => {
     
     // Fill Add Review Info step with valid data
     cy.logStep('Filling review information')
-    modal.addReviewInfoStep.fillReviewTitle('Invite Test Review')
-    modal.addReviewInfoStep.selectReviewType()
-    modal.addReviewInfoStep.selectReviewDomain()
-    modal.addReviewInfoStep.isCreateButtonEnabled()
-    cy.logStep('Creating review to proceed to invite step')
-    modal.addReviewInfoStep.elements.createNewReviewBtn().click().wait(3000)
-    cy.logValidation('Review created successfully', true)
+    cy.fixture('rayyan-data').then((data) => {
+      modal.addReviewInfoStep.fillReviewTitle(data.review.title)
+      modal.addReviewInfoStep.selectReviewType()
+      modal.addReviewInfoStep.selectReviewDomain()
+      modal.addReviewInfoStep.fillDescription(data.review.description)
+      modal.addReviewInfoStep.isCreateButtonEnabled()
+      cy.logStep('Creating review to proceed to invite step')
+      modal.addReviewInfoStep.elements.createNewReviewBtn().click().wait(3000)
+      cy.logValidation('Review created successfully', true)
+    })
     // Now on Invite Members step
     cy.logStep('Ready for invite members testing')
   })
@@ -83,7 +86,7 @@ describe('Invite Members Step - Standalone Suite', () => {
     cy.takeScreenshotWithContext('bulk-invite-completed')
   })
 
-  it('Verifyf if the user is invited before then system will not allow to add the same user again', () => {
+  it('Verify System Prevents Adding an Already Invited User', () => {
     cy.logStep('Testing if the user is invited before then system will not allow to add the same user again')
     
     dashboardPage.reviewerIcon()
@@ -214,8 +217,8 @@ describe('Invite Members Step - Standalone Suite', () => {
     cy.takeScreenshotWithContext('collaborator-invited-success')
   })
 
-    it('the system shoud show the user adde at the previes step to asserts it', () => {
-      cy.logStep('Testing not allow to add the same user again')
+    it('should verify invited user appears on review overview page with correct details', () => {
+      cy.logStep('Verifying invited user appears on review overview page')
       cy.contains('button', 'Close').click()
       cy.get('.-translate-y-px > :nth-child(1) > .text-primaryText').should('be.visible').click()
       cy.wait(3000)

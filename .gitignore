@@ -5,7 +5,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Cypress
-cypress/screenshots/
+
 cypress/videos/
 cypress/downloads/
 cypress/reports/
