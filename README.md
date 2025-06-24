@@ -154,6 +154,51 @@ automationTask/
 - **`videos/`**: Test execution recordings for debugging
 - **`downloads/`**: Files downloaded during test execution
 
+## 📸 Screenshots & Demo
+
+### 🎯 Expected Results
+
+Below are screenshots demonstrating the automation in action:
+
+#### **1. Rayyan Login Success**
+![Rayyan Login Success](screenshots/rayyan-login-success.png)
+*Successful login to Rayyan platform with dashboard access*
+
+#### **2. Review Creation Modal**
+![Review Creation Modal](screenshots/review-creation-modal.png)
+*Multi-step review creation modal with form validation*
+
+#### **3. Invite Members Step**
+![Invite Members Test](cypress/screenshots/invite-members-test.png)
+*Invite members test execution showing the Rayyan interface and test automation in action*
+
+#### **4. Success Message Display**
+![Success Message](screenshots/success-message.png)
+*Success confirmation with invited user details*
+
+#### **5. Mochawesome Test Report**
+![Mochawesome Report](screenshots/mochawesome-report.png)
+*Beautiful HTML test report with detailed results and statistics*
+
+### 📱 Responsive Testing
+![Responsive Testing](screenshots/responsive-testing.png)
+*Automation works across different viewport sizes and devices*
+
+### 🔍 Error Handling
+![Error Handling](screenshots/error-handling.png)
+*Graceful error handling with informative messages*
+
+---
+
+**Note**: To add your own screenshots:
+1. Run the tests: `npm run test:rayyan:headed`
+2. Take screenshots during test execution
+3. Save them in the `screenshots/` directory
+4. Update the paths in this README section
+5. Commit and push the changes
+
+---
+
 ## 🧪 Available Test Scripts
 
 ### Rayyan-Specific Commands
