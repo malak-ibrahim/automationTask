@@ -1,0 +1,12 @@
+{
+  "user": {
+    "email": "mlkibrahem6+1@gmail.com",
+    "password": "Abcd@123456"
+  },
+  "review": {
+    "title": "Test Review",
+    "description": "This is a test review for automation",
+    "type": "Collaborative",
+    "domain": "Health"
+  }
+} 

@@ -1,0 +1,16 @@
+{
+  "reviewers": [
+    "reviewer1@example.com",
+    "reviewer2@example.com",
+    "reviewer3@example.com",
+    "reviewer4@example.com",
+    "reviewer5@example.com"
+  ], 
+  "reviewersdublicted": [
+    "reviewer1@example.com",
+    "reviewer2@example.com",
+    "reviewer3@example.com",
+    "reviewer4@example.com",
+    "reviewer5@example.com"
+  ]
+} 
