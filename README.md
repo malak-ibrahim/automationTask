@@ -69,49 +69,49 @@ npm run cypress:run -- --spec "cypress/e2e/invite-members.cy.js"
 
 ```
 automationTask/
-├── 📄 README.md                              # Project documentation and setup guide
-├── 📄 AUTOMATION_SUMMARY.md                  # Detailed automation summary and results
-├── 📄 package.json                           # Project dependencies and npm scripts
-├── 📄 package-lock.json                      # Locked dependency versions
-├── 📄 cypress.config.js                      # Cypress configuration and settings
 ├── 📄 .gitignore                             # Git ignore patterns
+├── 📄 README.md                              # Project documentation and setup guide
+├── 📄 cypress.config.js                      # Cypress configuration and settings
+├── 📄 package-lock.json                      # Locked dependency versions
+├── 📄 package.json                           # Project dependencies and npm scripts
 ├── 📁 .git/                                  # Git repository data
 ├── 📁 node_modules/                          # Installed npm packages
 │
 ├── 📁 cypress/                               # Main Cypress test framework
 │   ├── 📁 e2e/                              # End-to-end test files
-│   │   ├── 📄 rayyan-review-creation.cy.js  # Main Rayyan automation tests
-│   │   ├── 📄 invite-members.cy.js          # Invite members email validation tests
-│   │   ├── 📄 login.cy.js                   # Generic login functionality tests
-│   │   ├── 📄 login-test.cy.js              # Rayyan-specific login tests
+│   │   ├── 📄 cookie-identification.cy.js   # Cookie management and session tests
 │   │   ├── 📄 demo-report.cy.js             # Mochawesome reporting demo tests
-│   │   └── 📄 cookie-identification.cy.js   # Cookie management and session tests
+│   │   ├── 📄 invite-members.cy.js          # Invite members email validation tests
+│   │   ├── 📄 login-test.cy.js              # Rayyan-specific login tests
+│   │   ├── 📄 login.cy.js                   # Generic login functionality tests
+│   │   └── 📄 rayyan-review-creation.cy.js  # Main Rayyan automation tests
 │   │
 │   ├── 📁 fixtures/                         # Test data files
 │   │   ├── 📄 rayyan-data.json              # Rayyan login credentials and user data
 │   │   ├── 📄 reviewers.json                # Reviewer email data for bulk testing
 │   │   └── 📄 users.json                    # Generic user test data
 │   │
-│   ├── 📁 support/                          # Support files and utilities
-│   │   ├── 📄 e2e.js                        # Global Cypress configuration
-│   │   ├── 📄 commands.js                   # Custom Cypress commands
-│   │   ├── 📁 pages/                        # Page Object Model classes
-│   │   │   ├── 📄 RayyanLoginPage.js        # Rayyan login page object
-│   │   │   ├── 📄 RayyanDashboardPage.js    # Rayyan dashboard page object
-│   │   │   ├── 📄 CreateReviewModal.js      # Review creation modal container
-│   │   │   ├── 📄 AddReviewInfoStep.js      # Add review info step object
-│   │   │   ├── 📄 InviteMemberStep.js       # Invite member step object
-│   │   │   └── 📄 UploadArticlesStep.js     # Upload articles step object
-│   │   └── 📁 helpers/                      # Helper utilities
-│   │       └── 📄 cookie-helper.js          # Cookie management utilities
+│   ├── 📁 reports/                          # Mochawesome HTML reports
+│   │   ├── 📄 mochawesome_YYYY-MM-DDTHHMMSS+0300.html  # Timestamped HTML reports
+│   │   ├── 📄 mochawesome_YYYY-MM-DDTHHMMSS+0300.json  # Timestamped JSON reports
+│   │   └── 📁 assets/                       # Report assets (CSS, JS, images)
 │   │
 │   ├── 📁 screenshots/                      # Test failure screenshots
+│   ├── 📁 support/                          # Support files and utilities
+│   │   ├── 📄 commands.js                   # Custom Cypress commands
+│   │   ├── 📄 e2e.js                        # Global Cypress configuration
+│   │   ├── 📁 helpers/                      # Helper utilities
+│   │   │   └── 📄 cookie-helper.js          # Cookie management utilities
+│   │   └── 📁 pages/                        # Page Object Model classes
+│   │       ├── 📄 AddReviewInfoStep.js      # Add review info step object
+│   │       ├── 📄 CreateReviewModal.js      # Review creation modal container
+│   │       ├── 📄 InviteMemberStep.js       # Invite member step object
+│   │       ├── 📄 RayyanDashboardPage.js    # Rayyan dashboard page object
+│   │       ├── 📄 RayyanLoginPage.js        # Rayyan login page object
+│   │       └── 📄 UploadArticlesStep.js     # Upload articles step object
+│   │
 │   ├── 📁 videos/                           # Test execution recordings
-│   ├── 📁 downloads/                        # Downloaded files during tests
-│   └── 📁 reports/                          # Mochawesome HTML reports
-│       ├── 📄 mochawesome_YYYY-MM-DDTHHMMSS+0300.html  # Timestamped HTML reports
-│       ├── 📄 mochawesome_YYYY-MM-DDTHHMMSS+0300.json  # Timestamped JSON reports
-│       └── 📁 assets/                       # Report assets (CSS, JS, images)
+│   └── 📁 downloads/                        # Downloaded files during tests
 │
 └── 📁 .husky/                               # Git hooks (if configured)
 ```
