@@ -124,7 +124,6 @@ automationTask/
 - **`.gitignore`**: Git ignore patterns for node_modules, screenshots, videos, etc.
 
 #### **Test Files (`cypress/e2e/`)**
-- **`rayyan-review-creation.cy.js`**: Main automation suite for Rayyan review creation workflow
 - **`invite-members.cy.js`**: Comprehensive email validation and invite member functionality tests
 - **`login.cy.js`**: Generic login functionality testing
 - **`login-test.cy.js`**: Rayyan-specific login validation tests
@@ -159,34 +158,6 @@ automationTask/
 ### 🎯 Expected Results
 
 Below are screenshots demonstrating the automation in action:
-
-#### **1. Rayyan Login Success**
-![Rayyan Login Success](screenshots/rayyan-login-success.png)
-*Successful login to Rayyan platform with dashboard access*
-
-#### **2. Review Creation Modal**
-![Review Creation Modal](screenshots/review-creation-modal.png)
-*Multi-step review creation modal with form validation*
-
-#### **3. Invite Members Step**
-![Invite Members Test](cypress/screenshots/invite-members-test.png)
-*Invite members test execution showing the Rayyan interface and test automation in action*
-
-#### **4. Success Message Display**
-![Success Message](screenshots/success-message.png)
-*Success confirmation with invited user details*
-
-#### **5. Mochawesome Test Report**
-![Mochawesome Report](screenshots/mochawesome-report.png)
-*Beautiful HTML test report with detailed results and statistics*
-
-### 📱 Responsive Testing
-![Responsive Testing](screenshots/responsive-testing.png)
-*Automation works across different viewport sizes and devices*
-
-### 🔍 Error Handling
-![Error Handling](screenshots/error-handling.png)
-*Graceful error handling with informative messages*
 
 ---
 
@@ -254,11 +225,9 @@ The Rayyan automation includes the following comprehensive test scenarios:
 ### 5. Edge Case Testing
 - ✅ Very long titles
 - ✅ Special characters in text
-- ✅ Unicode characters (international languages)
 
 ### 6. Invite Member Email Test Cases
 - ✅ Invite all reviewers from fixture as Reviewer using multiple emails
-- ✅ Add single email with Enter key
 - ✅ Add multiple emails with comma separation
 - ✅ Invite a single member as Collaborator
 - ✅ Invite multiple members with different roles
@@ -330,7 +299,7 @@ The automation uses realistic, academic-focused test data:
 - **users.json**: Generic user data for various test scenarios
 
 ### Test Email Patterns
-- Valid academic email formats (e.g., `researcher@university.edu`)
+- Valid academic email formats.
 - Invalid email formats for validation testing
 - Duplicate emails for duplicate prevention testing
 - Bulk email lists for performance testing
@@ -458,24 +427,6 @@ npm run test:rayyan:headed
 ```javascript
 cy.log('Custom log message')
 console.log('Debug information')
-```
-
-## 🔄 Continuous Integration
-
-### GitHub Actions Example
-```yaml
-name: Rayyan Automation Tests
-on: [push, pull_request]
-jobs:
-  cypress-run:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: cypress-io/github-action@v6
-        with:
-          spec: cypress/e2e/rayyan-review-creation.cy.js
-          browser: chrome
-          record: true
 ```
 
 
